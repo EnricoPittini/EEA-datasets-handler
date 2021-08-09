@@ -10,6 +10,6 @@ setup(
   author_email="pittinienrico@hotmail.it",
   license="MIT",
   install_requires=['requests',
-                    'pandas' 
+                    'pandas', 
                     'timeSeries_processing' ],
 )
