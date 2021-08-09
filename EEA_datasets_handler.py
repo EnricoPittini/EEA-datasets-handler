@@ -12,6 +12,7 @@ import os, os.path
 import re
 import warnings
 from copy import deepcopy
+
 import requests
 import pandas as pd
 # from tqdm import tqdm # PER BARRA DI CARICAMENTO
