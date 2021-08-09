@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
   name="EEA-datasets-handler",
-  version="0.0.1",
+  version="0.0.2",
   py_modules =["EEA_datasets_handler"],
   description="Library which handles the air pollution datasets provided by EEA",
   url="https://github.com/EnricoPittini/EEA-datasets-handler",
@@ -10,6 +10,5 @@ setup(
   author_email="pittinienrico@hotmail.it",
   license="MIT",
   install_requires=['requests',
-                    'pandas', 
-                    'timeSeries_processing' ],
+                    'pandas'],
 )

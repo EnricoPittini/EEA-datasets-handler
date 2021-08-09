@@ -9,14 +9,12 @@ There are three groups of functions.
 
 
 import os, os.path
-import requests
 import re
-import pandas as pd
 import warnings
 from copy import deepcopy
+import requests
+import pandas as pd
 # from tqdm import tqdm # PER BARRA DI CARICAMENTO
-
-from timeSeries_processing import find_missing_days
 
 warnings.simplefilter("always") # To show always the warnings
 
@@ -770,6 +768,29 @@ def preprocessing(df, fill=True, fill_n_days=10, fill_aggr="mean"):
     - The returned DataFrames are indexed by days. In particular, are used the pandas built-in types: the index type is
       pd.DatetimeIndex.
     """
+
+    def find_missing_days(days):
+        """
+        Return, given a vector of days, his missing days.
+
+        More specifically, the missing days are the ones which are not present in the contigous sequence of days in `days`.
+
+        Parameters
+        ----------
+        days: pd.DatetimeIndex
+            Vector of dates.
+
+        Returns
+        ----------
+        pd.DatetimeIndex
+            Vector of missing days.
+        """
+        day_min = min(days)
+        day_max = max(days)
+
+        return pd.date_range(start=day_min,end=day_max).difference(days)
+
+
     df = df.copy()
 
     # Remove invalid values
