@@ -25,7 +25,10 @@ import EEA_datasets_handler as eea
 
 # Download datasets
 dest_path = "C:\\Datasets"
-countries_cities_dict = {"IT":["Milano","Venezia"], "CY":"all", "AT":["Lienz","Linz","Wien"], "GB":["London"]}
+countries_cities_dict = {"IT":["Milano","Venezia"], 
+                         "CY":"all", 
+                         "AT":["Lienz","Linz","Wien"], 
+                         "GB":["London"]}
 pollutants = ["PM10", "PM15"]
 years = [2015, 2020]
 eea.download_datasets(dest_path, countries_cities_dict, pollutants, years)
