@@ -1,0 +1,671 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>EEA_datasets_handler module &mdash; EEA-datasets-handler 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="EEA-datasets-handler" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> EEA-datasets-handler
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">EEA-datasets-handler</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">EEA_datasets_handler module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EEA-datasets-handler</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">EEA-datasets-handler</a> &raquo;</li>
+        
+      <li>EEA_datasets_handler module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/EEA_datasets_handler.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-EEA_datasets_handler">
+<span id="eea-datasets-handler-module"></span><h1>EEA_datasets_handler module<a class="headerlink" href="#module-EEA_datasets_handler" title="Permalink to this headline">¶</a></h1>
+<p>Module which handles the air pollution datasets provided by EEA.</p>
+<dl class="simple">
+<dt>There are three groups of functions.</dt><dd><ol class="arabic simple">
+<li><p>Functions to get the EEA supported values.</p></li>
+<li><p>Functions to filter only the EEA supported values.</p></li>
+<li><p>Functions to download and handle the EEA datasets.</p></li>
+</ol>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.download_datasets">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">download_datasets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dest_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">countries_cities_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pollutants</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">years</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.download_datasets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download the selected EEA air pollution datasets, in the specified local path.</p>
+<p>The EEA datasets are csv files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dest_path</strong><span class="classifier">str</span></dt><dd></dd>
+<dt><strong>countries_cities_dict</strong><span class="classifier">dict</span></dt><dd><p>Map between countries and list of cities. Each country can be either expressed in the code notation or in the
+extended notation.</p>
+</dd>
+<dt><strong>pollutants</strong><span class="classifier">list</span></dt><dd><p>List of pollutants. Each pollutant can be either expressed in the numeric notation or in the textual notation.</p>
+</dd>
+<dt><strong>years</strong><span class="classifier">list</span></dt><dd><p>List of years.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Warns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>UserWarning</dt><dd><ul class="simple">
+<li><p>When are given not supported countries/cities/pollutants/years.</p></li>
+<li><p>When, for a specified country, isn’t donwload any dataset.</p></li>
+<li><p>When some problem occour during an HTTP request. (I.e. a problem during the downloading of certain datasets).</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>In <cite>countries_cities_dict</cite> a country can be associated to the string “all”: in this case all the supported cities of that
+country are taken into account.
+In addition, the whole <cite>countries_cities_dict</cite> can be the string “all”: in this case all the supported countries and
+associated cities are considered.
+Also <cite>pollutants</cite> can be “all”, which means that all the supported pollutants are taken into account.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.get_supported_cities">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">get_supported_cities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.get_supported_cities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all the EEA supported countries.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>list</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.get_supported_countries">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">get_supported_countries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.get_supported_countries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all the EEA supported countries, represented in the code notation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>list</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.get_supported_countries_cities_dict">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">get_supported_countries_cities_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.get_supported_countries_cities_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dict that maps the supported-countries code notations and their associated list of cities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>dict</dt><dd><p>Dictionary with keys the supported countries and values the associated list of cities.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>There are countries without supported cities: these countries has simply associated the empty list.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.get_supported_countries_dict">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">get_supported_countries_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.get_supported_countries_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dict that maps the supported-countries code notations and their associated extended notations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>dict</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Every country has both a different code notation and a different extended notation.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.get_supported_countries_inverse_dict">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">get_supported_countries_inverse_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.get_supported_countries_inverse_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dict that maps the supported-countries extended notations and their associated code notations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>dict</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.get_supported_pollutants">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">get_supported_pollutants</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.get_supported_pollutants" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all the EEA supported pollutants, represented in the numeric notation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>list</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.get_supported_pollutants_dict">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">get_supported_pollutants_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.get_supported_pollutants_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dict that maps the supported-pollutants numeric notations and their associated textual notations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>dict</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>While every pollutant has a different numeric notation, there are pollutants that have the same textual notation. (I.e.
+duplicate text notation)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.get_supported_pollutants_inverse_dict">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">get_supported_pollutants_inverse_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.get_supported_pollutants_inverse_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dict that maps the supported pollutants textual notations and their associated numeric notations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>dict</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The returned dictionary doesn’t contain all the supported pollutants: are not considered the pollutants for which
+exist at least another pollutant with the same textual-notation. (I.e. duplicate text notation)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.get_supported_years">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">get_supported_years</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.get_supported_years" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all the EEA supported years.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>list</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.keep_countries_cities_supported">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">keep_countries_cities_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">countries_cities_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.keep_countries_cities_supported" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keep, from the dictionary given in input, only the countries and cities supported by EEA.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>countries_cities_dict: dict</strong></dt><dd><p>Map between countries and list of cities. Each country can be either expressed in the code notation or in the
+extended notation.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>dict</dt><dd><p>A new dictionary with only the supported countries and cities. Each country is expressed in the code notation.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Warns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>UserWarning</dt><dd><ul class="simple">
+<li><p>When are given not supported countries.</p></li>
+<li><p>When are given not supported cities for a certain (supported) country.</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>In <cite>countries_cities_dict</cite> a country can have associated the string “all”: the returned dictionary will contain all the
+supported cities for that country.
+The whole <cite>countries_cities_dict</cite> can be the string “all”: the returned dictionary will contain all the supported
+countries and associated cities.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.keep_pollutants_supported">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">keep_pollutants_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pollutants</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.keep_pollutants_supported" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keep, from the given pollutants, only the ones supported by EEA.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>pollutants: list</strong></dt><dd><p>List of pollutants. Each pollutant can be either expressed in the numeric or textual notation.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>list</dt><dd><p>A new list with only supported pollutants. Each pollutant is expressed in the numeric notation.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Warns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>UserWarning</dt><dd><p>When are given not supported pollutants.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p><cite>pollutants</cite> can be the string “all”: in this case the returned list contains all the supported pollutants.</p></li>
+<li><p>In <cite>pollutants</cite> are not considered supported the pollutants expressed in textual notation for which exist at least
+another pollutant with the same textual notation. (I.e. duplicate text notation)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.keep_years_supported">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">keep_years_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">years</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.keep_years_supported" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keep, from the given years, only the ones supported by EEA.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>years: list</strong></dt><dd><p>List of years.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>list</dt><dd><p>A new list with only supported years.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Warns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>UserWarning</dt><dd><p>When are given not supported years.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.load_datasets">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">load_datasets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">countries_cities_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pollutants</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">years</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.load_datasets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the selected EEA air pollution datasets, retrieved from the local storage, in a single pandas DataFrame.
+(The EEA datasets are csv files).</p>
+<dl class="simple">
+<dt>The returned DataFrame it’s a raw DataFrame. This means two things.</dt><dd><ol class="arabic simple">
+<li><p>The DataFrame simply contains air pollution concentration measurements, which are not properly grouped by their
+days.</p></li>
+<li><p>The values in the DataFrame have not been cleaned.</p></li>
+</ol>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>source_path</strong><span class="classifier">str</span></dt><dd><p>Local path in which search for the selected datasets.</p>
+</dd>
+<dt><strong>countries_cities_dict</strong><span class="classifier">dict</span></dt><dd><p>Map between countries and list of cities. Each country can be either expressed in the code notation or in the
+extended notation.</p>
+</dd>
+<dt><strong>pollutants</strong><span class="classifier">list</span></dt><dd><p>List of pollutants. Each pollutant can be either expressed in the numeric notation or in the textual notation.</p>
+</dd>
+<dt><strong>years</strong><span class="classifier">list</span></dt><dd><p>List of years.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>pd.DataFrame</dt><dd><p>DataFrame containing all the selected datasets.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Warns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>UserWarning</dt><dd><ul class="simple">
+<li><p>When are given not supported countries/pollutants/years.</p></li>
+<li><p>When, for a specified country, isn’t found any dataset.</p></li>
+<li><p>When it’s not found any dataset at all.</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>In <cite>countries_cities_dict</cite> a country can be associated to the string “all”: in this case all the supported cities of that
+country are taken into account.
+In addition, the whole <cite>countries_cities_dict</cite> can be the string “all”: in this case all the supported countries and
+associated cities are considered.
+Also <cite>pollutants</cite> can be “all”, which means that all the supported pollutants are taken into account.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.preprocessing">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">preprocessing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_n_days</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_aggr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mean'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.preprocessing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prepare and clean the given raw EEA DataFrame, grouping the air pollution concentration measurements by day.</p>
+<p>Return three DataFrames. All of them are indexed by dayes and all of them have only one column.
+But:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>the first of them contains, for each day, the daily mean concentration;</p></li>
+<li><p>the second contains, for each day, the daily min concentration;</p></li>
+<li><p>the third contains, for each day, the daily max concentration.</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>df</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>The DataFrame to clean. It’s a raw EEA DataFrame, loaded using the load_datasets function.</p>
+</dd>
+<dt><strong>fill</strong><span class="classifier">bool</span></dt><dd><p>If True, the missing days (i.e. the days without any measurements in <cite>df</cite>) are filled. Otherwise they remain with a
+missing value.
+(In all the three returned DataFrame)</p>
+</dd>
+<dt><strong>fill_n_days</strong><span class="classifier">int or str</span></dt><dd><p>The number of previous days, contained in <cite>df</cite>, used to fill a missing day.
+<cite>fill_n_days</cite> can be either an integer or the string “all”: in the latter case all the previous days in <cite>df</cite> are used
+to fill the missing days.</p>
+</dd>
+<dt><strong>fill_aggr</strong><span class="classifier">str</span></dt><dd><p>The statistic aggregation used to fill a missing day.
+It can be either “mean” or “min” or “max”.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>pd.DataFrame</dt><dd><p>The prepared and cleaned DataFrame, containing the daily mean concentration.</p>
+</dd>
+<dt>pd.DataFrame</dt><dd><p>The prepared and cleaned DataFrame, containing the daily min concentration.</p>
+</dd>
+<dt>pd.DataFrame</dt><dd><p>The prepared and cleaned DataFrame, containing the daily max concentration.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Warns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>UserWarning</dt><dd><p>When are present missing days.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>If <cite>fill</cite> is True, the missing days are filled computing the aggregation <cite>fill_aggr</cite> on the <cite>fill_n_days</cite> days in <cite>df</cite>
+preceding the missing day.
+(In all the three returned DataFrame)
+Moreover the missing days, for which are not found previous days in <cite>df</cite>, are deleted from the returned DataFrame.
+These days are surely the first days in <cite>df</cite>.</p></li>
+<li><p>The returned DataFrames are indexed by days. In particular, are used the pandas built-in types: the index type is
+pd.DatetimeIndex.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.remove_datasets">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">remove_datasets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">countries_cities_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pollutants</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">years</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.remove_datasets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the selected EEA air pollution datasets from the local storage.
+(The EEA datasets are csv files).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>source_path</strong><span class="classifier">str</span></dt><dd><p>Local path in which delete the selected datasets.</p>
+</dd>
+<dt><strong>countries_cities_dict</strong><span class="classifier">dict</span></dt><dd><p>Map between countries and list of cities. Each country can be either expressed in the code notation or in the
+extended notation.</p>
+</dd>
+<dt><strong>pollutants</strong><span class="classifier">list</span></dt><dd><p>List of pollutants. Each pollutant can be either expressed in the numeric notation or in the textual notation.</p>
+</dd>
+<dt><strong>years</strong><span class="classifier">list</span></dt><dd><p>List of years.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Warns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>UserWarning</dt><dd><p>When are given not supported countries/pollutants/years.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>In <cite>countries_cities_dict</cite> a country can be associated to the string “all”: in this case all the supported cities of that
+country are taken into account.
+In addition, the whole <cite>countries_cities_dict</cite> can be the string “all”: in this case all the supported countries and
+associated cities are considered.
+Also <cite>pollutants</cite> can be “all”, which means that all the supported pollutants are taken into account.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EEA_datasets_handler.retrieve_datasets">
+<span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">retrieve_datasets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">countries_cities_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pollutants</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">years</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.retrieve_datasets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the selected EEA air pollution datasets from the local storage.</p>
+<p>The EEA datasets are csv files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>source_path</strong><span class="classifier">str</span></dt><dd><p>Local path in which search for the selected datasets.</p>
+</dd>
+<dt><strong>countries_cities_dict</strong><span class="classifier">dict</span></dt><dd><p>Map between countries and list of cities. Each country can be either expressed in the code notation or in the
+extended notation.</p>
+</dd>
+<dt><strong>pollutants</strong><span class="classifier">list</span></dt><dd><p>List of pollutants. Each pollutant can be either expressed in the numeric notation or in the textual notation.</p>
+</dd>
+<dt><strong>years</strong><span class="classifier">list</span></dt><dd><p>List of years.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>list</dt><dd><p>List of the retrieved datasets. Each dataset is represented as a string (i.e. his local path).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Warns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>UserWarning</dt><dd><ul class="simple">
+<li><p>When are given not supported countries/pollutants/years.</p></li>
+<li><p>When, for a specified country, isn’t found any dataset.</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>In <cite>countries_cities_dict</cite> a country can be associated to the string “all”: in this case all the supported cities of that
+country are taken into account.
+In addition, the whole <cite>countries_cities_dict</cite> can be the string “all”: in this case all the supported countries and
+associated cities are considered.
+Also <cite>pollutants</cite> can be “all”, which means that all the supported pollutants are taken into account.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="modules.html" class="btn btn-neutral float-left" title="EEA-datasets-handler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Enrico Pittini.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
