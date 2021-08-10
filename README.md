@@ -27,7 +27,7 @@ import EEA_datasets_handler as eea
 dest_path = "C:\\Datasets"
 countries_cities_dict = {"IT":["Milano","Venezia"], 
                          "CY":"all", 
-                         "AT":["Lienz","Linz","Wien"], 
+                         "AT":["Lienz","Wien"], 
                          "GB":["London"]}
 pollutants = ["PM10", "PM15"]
 years = [2015, 2020]
