@@ -15,11 +15,8 @@ from copy import deepcopy
 
 import requests
 import pandas as pd
-# from tqdm import tqdm # PER BARRA DI CARICAMENTO
 
 warnings.simplefilter("always") # To show always the warnings
-
-# TODO : eliminare riga di codice visualizzata nei warnings
 
 
 
