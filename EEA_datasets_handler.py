@@ -1,5 +1,5 @@
 """
-Module which handles the air pollution datasets provided by EEA.
+Module which handles the air pollution datasets provided by `EEA <https://www.eea.europa.eu/data-and-maps/data/aqereporting-8>`_.
 
 There are three groups of functions.
     1. Functions to get the EEA supported values.
