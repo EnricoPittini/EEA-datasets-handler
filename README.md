@@ -1,5 +1,5 @@
 # EEA-datasets-handler
-Library which handles the air pollution datasets provided by EEA.
+Library which handles the air pollution datasets provided by [EEA](https://www.eea.europa.eu/data-and-maps/data/aqereporting-8).
 
 There are three groups of functions.
 1. Functions to get the EEA supported values.
@@ -43,6 +43,12 @@ df = eea.load_datasets(source_path, countries_cities_dict, pollutants, years)
 # Preprocess the DataFrame to time series DataFrames
 df_mean, df_min, df_max = eea.preprocessing(df, fill=True)
 ```
+
+# References
+- [EEA](https://www.eea.europa.eu/). The European Environment Agency (EEA) is an agency of the European Union, whose task is to provide sound, independent information on the environment.
+- [pandas](https://pandas.pydata.org/) is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool,
+built on top of the Python programming language.
+- [requests](https://docs.python-requests.org/en/master/) is an elegant and simple HTTP library for Python, built for human beings.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
