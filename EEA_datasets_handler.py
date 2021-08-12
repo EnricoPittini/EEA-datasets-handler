@@ -462,9 +462,8 @@ def _download_single_dataset(dest_path, country, city, pollutants, years):
                 try:
                     r_data =requests.get(link) # Download the dataset
                 except:
-                    warnings.warn(("Something bad happened while downloading the dataset " +link+
-                                   " for the country "+country+
-                                   ((" for the city "+city) if city else "")+
+                    warnings.warn(("Something bad happened while downloading data for the country "+country+
+                                   (" for the city "+city if city else "")+
                                    " for the pollutants "+str(pollutants)+
                                    " for the years "+str(years)))
                     continue
