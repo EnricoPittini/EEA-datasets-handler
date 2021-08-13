@@ -23,7 +23,7 @@ pip install EEA-datasets-handler
 ```python
 import EEA_datasets_handler as eea 
 
-# Download datasets
+# Download the datasets
 dest_path = "C:\\Datasets"
 countries_cities_dict = {"IT":["Milano","Venezia"], 
                          "CY":"all", 
@@ -33,14 +33,14 @@ pollutants = ["PM10", "PM15"]
 years = [2015, 2020]
 eea.download_datasets(dest_path, countries_cities_dict, pollutants, years)
 
-# Load datasets in a raw pandas DataFrame
+# Load the datasets in a raw pandas DataFrame
 source_path = "C:\\Datasets\\EEA"
 countries_cities_dict = {"IT":["Milano"]}
 pollutants = ["PM10"]
 years = [2020] 
 df = eea.load_datasets(source_path, countries_cities_dict, pollutants, years)
 
-# Preprocess the DataFrame to time series DataFrames
+# Preprocess the DataFrame to a time series DataFrames
 df_mean, df_min, df_max = eea.preprocessing(df, fill=True)
 ```
 
