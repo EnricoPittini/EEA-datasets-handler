@@ -63,7 +63,7 @@ def get_supported_pollutants_inverse_dict():
     Notes
     ----------
     The returned dictionary doesn't contain all the supported pollutants: the pollutants for which exist at least another
-    pollutant with the same textual-notation are not considered . (I.e. duplicate text notation).
+    pollutant with the same textual-notation are not considered . (I.e. duplicate textual notation).
     """
     return {'SO2': 1, 'CO': 10, 'Pb in PM2.5': 1012, 'Hg in PM2.5': 1013, 'Cd in PM2.5': 1014, 'Ni in PM2.5': 1015, 'Cr in PM2.5': 1016, 'Mn in PM2.5': 1017, 'As in PM2.5': 1018, 'NH4+ in PM2.5': 1045, 'NO3- in PM2.5': 1046, 'SO42- in PM2.5': 1047, 'Se in PM2.5': 1048, 'V in PM2.5': 1049, 'Zn in PM2.5': 1063, 'Co in PM2.5': 1064, 'Fe in PM2.5': 1065, 'Cu in PM2.5': 1073, 'H2S': 11, 'Dibenzo(ah)anthracene in PM2.5': 1419, 'Benzo(a)anthracene in PM2.5': 1610, 'Benzo(b)fluoranthene in PM2.5': 1617, 'Benzo(k)fluoranthene in PM2.5': 1626, 'Ca2+ in PM2.5': 1629, 'Cl- in PM2.5': 1631, 'Indeno-(1,2,3-cd)pyrene in PM2': 1655, 'K+ in PM2.5': 1657, 'Mg2+ in PM2.5': 1659, 'Na+  in PM2.5': 1668, 'Benzo(j)fluoranthene in PM2.5': 1759, 'EC in PM2.5': 1771, 'OC in PM2.5': 1772, 'CS2': 19, 'C6H6': 20, 'pH': 2076, 'C6H5-CH3': 21, 'C6H5-CH=CH2': 22, 'CH2=CH-CN': 23, 'CH2=CH-CH=CH2': 24, 'HCHO': 25, 'CHCl=CCl2': 26, 'PO43-': 2770, 'TP': 2771, 'CH2Cl2': 28, 'SA': 3, 'PAH': 30, 'Pb in TSP': 3012, 'Hg in TSP': 3013, 'Cd in TSP': 3014, 'Ni in TSP': 3015, 'Cr in TSP': 3016, 'Mn in TSP': 3017, 'As in TSP': 3018, 'CFC-11': 302, 'CFC-113': 303, 'CFC-12': 304, 'Zn in TSP': 3063, 'HCFC-123': 307, 'Cu in TSP': 3073, 'HCFC-22': 308, '1-methylnaphtalene': 309, 'VC': 31, '1-methylphenanthrene': 310, 'Methyletylketone (MEK)': 311, 'Crotonaldehyde': 312, '2-methylanthracene': 313, '2-methylbenzaldehyde': 314, '2-methylnaphtalene': 315, '(CH3)2-CH-CH2-CH2-CH3': 316, '2-methylphenanthrene': 317, 'Methacroleine': 318, 'Methylglyoxal': 319, 'THC (NM)': 32, 'Acroleine': 320, 'Methylvinylketone (MVK)': 321, '3-methylbenzaldehyde': 322, '3-methylpentane': 323, '4-methylbenzaldehyde': 324, 'NOy': 326, 'T-VOC': 33, 'PCB-128': 333, 'PAN': 34, 'PCB-177': 340, 'PCB-26': 344, 'PCB-44': 348, 'NH3': 35, 'Acenaphtylene': 352, 'N-DEP': 36, 'Cl- in TSP': 3631, 'Na+  in TSP': 3668, 'S-DEP': 37, 'Benzaldehyde': 372, 'Benzo(a)fluoranthene': 373, 'C8H8O': 374, 'NO': 38, 'Benzo(b+j+k)fluoranthenes': 380, 'HCl': 39, 'Black Carbon': 391, 'Butanales': 393, 'H3C-CH2-CH2-CH3': 394, 'Butenes': 395, 'Methacroleine + Butanal': 396, 'SPM': 4, 'HF': 40, 'Carbon-tetrachloride': 401, 'Hg0': 4013, 'CH4': 41, 'k': 412, 'Cyclo-hexane': 416, 'Cyklopenta(cd)pyrene': 417, 'Dibenzo(ac+ah)anthracenes': 418, 'C6H5OH': 42, 'Dibenzofuran': 420, 'Dibenzothiophene': 421, 'N2O': 425, 'Endrin': 426, 'Acetaldehyde': 427, 'C2H6': 428, 'Glyoxal': 429, 'H2C=CH2': 430, 'C6H5-C2H5': 431, 'HC=CH': 432, 'Halon 1211': 438, 'Halon 1301': 439, 'C7H16': 441, 'n-Hexanal': 442, 'C6H14': 443, 'H3C-CH(CH3)2': 447, 'i-Heptane': 448, '(CH3)3-C-CH2-CH-(CH3)2': 449, 'NH4': 45, 'H3C-CH2-CH(CH3)2': 450, 'CH2=CH-C(CH3)=CH2': 451, 'C6H4Cl2': 453, 'C9H20': 454, 'Tetrachloromethane (air)': 456, 'Chlorobenzene (air)': 457, '1,1,2-trichloroethane (air)': 458, '1,1-dichloroethane (air)': 459, 'NO3': 46, '1,2-dichloroethylene (air)': 460, '1,2-dichloroethane (air)': 461, '1,1,1-trichloroethane (air)': 462, 'Methyl-chloroform': 463, 'm,p-C6H4(CH3)2': 464, 'Naphtalene': 465, 'Neo-hexane': 466, 'Neo-pentane': 467, 'SO4 (H2SO4 aerosols) (SO4--)': 47, 'C8H18': 475, 'Se': 48, 'Hg0 + Hg-reactive': 4813, 'o-C6H4-(CH3)2': 482, 'Valeraldehyde': 485, 'H3C-(CH2)3-CH3': 486, 'Pentenes': 487, 'V': 49, 'Acetophenone': 491, 'HBB': 4911, 'PBT': 4912, 'PBEB': 4913, 'α-DBE-DBCH': 4914, 'β-DBE-DBCH': 4915, 'BEH-TEBP': 4916, 'BTBPT': 4917, 'EH-TBB': 4918, 'Syn-DP': 4919, 'Anti-DP': 4920, 'DBDPE': 4921, 'TBP': 4922, 'PM10': 5, 'HNO3': 50, 'C4H8O': 501, 'Pb in PM10': 5012, 'Hg in PM10': 5013, 'Cd in PM10': 5014, 'Ni in PM10': 5015, 'Cr in PM10': 5016, 'Mn in PM10': 5017, 'As in PM10': 5018, 'Propanal': 502, 'H3C-CH2-CH3': 503, 'Acetone': 504, 'NH4+ in PM10': 5045, 'NO3- in PM10': 5046, 'SO42-  in PM10': 5047, 'Se in PM10': 5048, 'V in PM10': 5049, 'CH2=CH-CH3': 505, 'CH2=CH-CH3 + H3C-CH2-CH2-CH3': 506, 'Sn in PM10': 5060, 'Zn in PM10': 5063, 'Co in PM10': 5064, 'Fe in PM10': 5065, 'H3C-(CH2)3-CH3 + H3C-CH2-CH(CH3)2': 507, 'Cu in PM10': 5073, 'Retene': 508, 'Acetone + Acrolein': 509, 'HC C2-C6(excl. AROM. & CHLH)': 51, 'sum-PCB': 517, 'HC > C6 (excl. AROM. & CHLH)': 52, 'SO2 + SO4--': 520, 'Aromatics (except C6H6)': 53, '1-Methyl anthracene in PM10': 5301, 'Anthanthrene in PM10': 5364, 'Benzo(e)pyrene in PM10': 5381, 'Chlorinated hydrocarbons': 54, 'Chrysene in PM10': 5406, 'Coronene in PM10': 5415, 'Cyclopenta(c,d)pyrene in PM10': 5417, 'Dibenzo(ac+ah)anthracene in PM10': 5418, 'Benzo(b,j)fluorantheneinPM10': 5480, 'Perylene in PM10': 5488, '4.5-Methylene phenanthrene in PM10': 5521, '9-Methyl anthracene in PM10': 5523, 'Cholanthrene in PM10': 5526, 'Benzo(b+j)fluoranthene in PM10': 5580, 'Anthracene in PM10 (aerosol)': 5606, 'Benzo(ghi)perylene in PM10': 5623, 'Ca2+ in PM10': 5629, 'Cl- in PM10': 5631, 'Dibenzo(ae)pyrene in PM10': 5636, 'Dibenzo(ah)pyrene in PM10': 5637, 'Dibenzo(ai)pyrene in PM10': 5639, 'Fluoranthene in PM10 (aerosol)': 5643, 'K+ in PM10': 5657, 'Mg2+ in PM10': 5659, 'Na+  in PM10': 5668, 'Phenanthrene in PM10 (aerosol)': 5712, 'Pyrene in PM10 (aerosol)': 5715, 'EC in PM10': 5771, 'OC in PM10': 5772, 'BS': 6, 'PM2.5': 6001, 'PM1': 6002, 'H2C=CH-CH2-CH3': 6005, 'trans-H3C-CH=CH-CH3': 6006, 'cis-H3C-CH=CH-CH3': 6007, 'H2C=CH-CH2-CH2-CH3': 6008, 'H3C-HC=CH-CH2-CH3': 6009, '3-methylphenantrene': 601, '1,2,4-C6H3(CH3)3': 6011, '1,2,3-C6H3(CH3)3': 6012, '1,3,5-C6H3(CH3)3': 6013, 'C6H12': 6016, 'C6H12O2': 6017, '9-methylphenantrene': 602, 'Benzo(a)fluorene': 613, 'Benzo(b)fluorene': 619, 'Fluor (except HF)': 62, 'Dibenz(ah)anthracene': 635, 'VPM10': 6400, 'NVPM10': 6401, 'VPM2.5': 6410, 'NVPM2.5': 6411, 'VPM1': 6420, 'NVPM1': 6421, 'H+': 648, 'Heptachlor Epoxide': 652, 'Hg-reactive': 653, 'Back scattering': 66, 'Mo': 661, 'NH4+': 664, 'NO3-': 666, 'Kj-N': 667, 'HNO3+NO3': 67, 'PCB-114': 673, 'PCB-141': 679, 'NH3+NH4': 68, 'PCB-157': 683, 'PCB-167': 684, 'PCB-170': 685, 'PCB-183': 689, 'Radioactivity': 69, 'PCB-187': 690, 'PCB-189': 691, 'PCB-194': 692, 'PCB-206': 693, 'PCB-209': 694, 'PCB-33': 698, 'PCB-37': 699, 'O3': 7, 'PCB-47': 700, 'PCB-60': 704, 'PCB-66': 705, 'PCB-74': 706, 'PCB-99': 707, 'PCB_122': 708, 'PCB_123': 709, 'CO2': 71, 'PCB_128': 710, 'PCB_138': 711, 'SO4--': 719, 'SO4-- corr': 720, 'TI': 723, 'Vanadium': 728, '1-Methyl anthracene': 7301, '1-Methyl Naphthalene': 7309, '1-Methyl phenanthrene': 7310, '2-Methyl anthracene': 7313, '2-Methyl Naphthalene': 7315, '2-Methyl phenanthrene': 7317, 'Acenaphthylene': 7352, 'cis-NO': 736, 'Cyclopenta(c,d)pyrene': 7417, 'Dibenzo(ah+ac)anthracene': 7418, 'Naphthalene': 7465, 'Benzo(b+j)fluoranthene': 7480, '4.5-Methylene phenanthrene': 7521, '5-Methyl Chrysene': 7522, '9-Methyl anthracene': 7523, 'Benzo(b)naphtho(2,1-d)thiophene': 7524, 'Benzo(c)phenanthrene': 7525, 'Cholanthrene': 7526, 'Dibenzo(ac)anthracene': 7527, 'Dibenzo(al)pyrene': 7528, 'precip_amount': 753, 'precip_amount_off': 754, 'trans_NO': 758, 'Benzo(j)fluorene': 761, 'EC': 771, 'OC': 772, 'C6H4-(CH3)2': 78, 'NO2': 8, 'p-C6H4(CH3)2': 80, 'm-C6H4-(CH3)2': 81, 'trans-H3C-HC=CH-CH2-CH3': 82, 'cis-H3C-HC=CH-CH2-CH3': 83, 'NOX as NO2': 9}
 
@@ -178,8 +178,8 @@ def keep_pollutants_supported(pollutants):
     Notes
     ----------
     - `pollutants` can be the string "all": in this case the returned list contains all the supported pollutants.
-    - In `pollutants`,  the pollutants expressed in textual notation for which exist at least another pollutant with the same
-      textual notation are not considered supported. (I.e. duplicate text notation)
+    - In `pollutants`, if a pollutant is expressed with a textual notation that is not unique (i.e. another EEA pollutant has
+      the same textual notation) that pollutant is not considered supported.
     """
     all_supported_pollutants = get_supported_pollutants()
 
@@ -505,7 +505,7 @@ def retrieve_datasets(source_path, countries_cities_dict, pollutants, years):
     Parameters
     ----------
     source_path : str
-        Local path in which search for the selected datasets.
+        Local path in which the selected datasets are searched.
     countries_cities_dict : dict
         Map between countries and list of cities. Each country can be either expressed in the code notation or in the
         extended notation.
@@ -542,7 +542,7 @@ def retrieve_datasets(source_path, countries_cities_dict, pollutants, years):
         Parameters
         ----------
         source_path: str
-            Local path in which search for the files.
+            Local path in which the files are searched.
         keywords: list
             List of tuples, in which each tuple contains an indefinite number of strings.
             These strings can be seen as the keywords.
@@ -631,7 +631,7 @@ def remove_datasets(source_path, countries_cities_dict, pollutants, years):
     Parameters
     ----------
     source_path : str
-        Local path from which remove the selected datasets.
+        Local path from which the selected datasets are removed.
     countries_cities_dict : dict
         Map between countries and list of cities. Each country can be either expressed in the code notation or in the
         extended notation.
@@ -666,7 +666,7 @@ def load_datasets(source_path, countries_cities_dict, pollutants, years):
     Load the selected EEA air pollution datasets, retrieved from the local storage, in a single pandas DataFrame.
     (The EEA datasets are csv files).
 
-    The returned DataFrame it's a raw DataFrame. This means two things.
+    The returned DataFrame is a raw DataFrame. This means two things.
         1. The DataFrame simply contains air pollution concentration measurements, which are not properly grouped by their
            days.
         2. The values in the DataFrame have not been cleaned.
@@ -674,7 +674,7 @@ def load_datasets(source_path, countries_cities_dict, pollutants, years):
     Parameters
     ----------
     source_path : str
-        Local path in which search for the selected datasets.
+        Local path in which the selected datasets are searched.
     countries_cities_dict : dict
         Map between countries and list of cities. Each country can be either expressed in the code notation or in the
         extended notation.
@@ -720,9 +720,9 @@ def preprocessing(df, fill=True, fill_n_days=10, fill_aggr="mean"):
     """
     Prepare and clean the given raw EEA DataFrame, grouping the air pollution concentration measurements by day.
 
-    Return three DataFrames. All of them are indexed by dayes and all of them have only one column.
+    Return three DataFrames. All of these DataFrames are indexed by dayes and all of them have only one column.
     But:
-        - the first of them contains, for each day, the daily mean concentration;
+        - the first DataFrame contains, for each day, the daily mean concentration;
         - the second contains, for each day, the daily min concentration;
         - the third contains, for each day, the daily max concentration.
 
@@ -731,7 +731,7 @@ def preprocessing(df, fill=True, fill_n_days=10, fill_aggr="mean"):
     df : pd.DataFrame
         The DataFrame to clean. It's a raw EEA DataFrame, loaded using the load_datasets function.
     fill : bool
-        If True, the missing days (i.e. the days in `df` without any measurements) are filled. Otherwise, they remain with a
+        If True, the missing days (i.e. the days in `df` without any measurement) are filled. Otherwise, they remain with a
         missing value.
         (In all the three returned DataFrame)
     fill_n_days : int or str
