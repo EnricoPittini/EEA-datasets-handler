@@ -663,7 +663,7 @@ def remove_datasets(source_path, countries_cities_dict, pollutants, years):
 
 def load_datasets(source_path, countries_cities_dict, pollutants, years):
     """
-    Load the selected EEA air pollution datasets, retrieved from the local storage, in a single pandas DataFrame.
+    Load the selected EEA air pollution datasets, retrieved from the local storage, into a single pandas DataFrame.
     (The EEA datasets are csv files).
 
     The returned DataFrame is a raw DataFrame. This means two things.
