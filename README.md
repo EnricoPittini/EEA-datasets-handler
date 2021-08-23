@@ -6,10 +6,11 @@ There are three groups of functions.
 2. Functions to filter only the EEA supported values.
 3. Functions to download and handle the EEA datasets.
 
-This library is part of my bachelor thesis, do check it out the other works.
+This library is part of my bachelor thesis, check out the other works.
 - [ILMETEO-datasets-handler](https://github.com/EnricoPittini/ILMETEO-datasets-handler)
 - [model-selection](https://github.com/EnricoPittini/model-selection)
 - [timeSeries-processing](https://github.com/EnricoPittini/timeSeries-processing)
+- [Air-quality-prediction](https://github.com/EnricoPittini/Air-quality-prediction)
 
 ## Installation
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install EEA-datasets-handler.
