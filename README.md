@@ -113,7 +113,7 @@ df = eea.load_datasets(source_path, countries_cities_dict, pollutants, years)
 df_mean, df_min, df_max = eea.preprocessing(df, fill=True)
 ```
 
-# References
+## References
 - [EEA](https://www.eea.europa.eu/). The European Environment Agency (EEA) is an agency of the European Union, whose task is to provide sound, independent information on the environment.
 - [pandas](https://pandas.pydata.org/) is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool,
 built on top of the Python programming language.
