@@ -163,7 +163,7 @@
             
   <div class="section" id="module-EEA_datasets_handler">
 <span id="eea-datasets-handler-module"></span><h1>EEA_datasets_handler module<a class="headerlink" href="#module-EEA_datasets_handler" title="Permalink to this headline">¶</a></h1>
-<p>Module which handles the air pollution datasets provided by EEA.</p>
+<p>Module which handles the air pollution datasets provided by <a class="reference external" href="https://www.eea.europa.eu/data-and-maps/data/aqereporting-8">EEA</a>.</p>
 <dl class="simple">
 <dt>There are three groups of functions.</dt><dd><ol class="arabic simple">
 <li><p>Functions to get the EEA supported values.</p></li>
@@ -175,7 +175,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="EEA_datasets_handler.download_datasets">
 <span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">download_datasets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dest_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">countries_cities_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pollutants</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">years</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.download_datasets" title="Permalink to this definition">¶</a></dt>
-<dd><p>Download the selected EEA air pollution datasets, in the specified local path.</p>
+<dd><p>Download the selected EEA air pollution datasets in the specified local path.</p>
 <p>The EEA datasets are csv files.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -193,17 +193,17 @@ extended notation.</p>
 <dt class="field-even">Warns</dt>
 <dd class="field-even"><dl class="simple">
 <dt>UserWarning</dt><dd><ul class="simple">
-<li><p>When are given not supported countries/cities/pollutants/years.</p></li>
-<li><p>When, for a specified country, isn’t donwload any dataset.</p></li>
-<li><p>When some problem occour during an HTTP request. (I.e. a problem during the downloading of certain datasets).</p></li>
+<li><p>When not supported countries/cities/pollutants/years are given.</p></li>
+<li><p>When, for a specified country, no dataset has been downloaded.</p></li>
+<li><p>When some problem occurs during an HTTP request. (I.e. a problem during the downloading of certain datasets).</p></li>
 </ul>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>In <cite>countries_cities_dict</cite> a country can be associated to the string “all”: in this case all the supported cities of that
-country are taken into account.
+<p>In <cite>countries_cities_dict</cite> a country can be associated with  the string “all”: in this case all the supported cities of
+that country are taken into account.
 In addition, the whole <cite>countries_cities_dict</cite> can be the string “all”: in this case all the supported countries and
 associated cities are considered.
 Also <cite>pollutants</cite> can be “all”, which means that all the supported pollutants are taken into account.</p>
@@ -242,13 +242,13 @@ Also <cite>pollutants</cite> can be “all”, which means that all the supporte
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><dl class="simple">
-<dt>dict</dt><dd><p>Dictionary with keys the supported countries and values the associated list of cities.</p>
+<dt>dict</dt><dd><p>Dictionary which has as keys the supported countries and as values the associated list of cities.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>There are countries without supported cities: these countries has simply associated the empty list.</p>
+<p>There are countries without supported cities: these countries have simply associated an empty list.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -263,7 +263,7 @@ Also <cite>pollutants</cite> can be “all”, which means that all the supporte
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>Every country has both a different code notation and a different extended notation.</p>
+<p>Each country has both a different code notation and a different extended notation.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -304,7 +304,7 @@ Also <cite>pollutants</cite> can be “all”, which means that all the supporte
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>While every pollutant has a different numeric notation, there are pollutants that have the same textual notation. (I.e.
+<p>While each pollutant has a different numeric notation, there are pollutants that have the same textual notation. (I.e.
 duplicate text notation)</p>
 </dd></dl>
 
@@ -320,8 +320,8 @@ duplicate text notation)</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>The returned dictionary doesn’t contain all the supported pollutants: are not considered the pollutants for which
-exist at least another pollutant with the same textual-notation. (I.e. duplicate text notation)</p>
+<p>The returned dictionary doesn’t contain all the supported pollutants: the pollutants for which exist at least another
+pollutant with the same textual-notation are not considered . (I.e. duplicate textual notation).</p>
 </dd></dl>
 
 <dl class="py function">
@@ -358,8 +358,8 @@ extended notation.</p>
 <dt class="field-odd">Warns</dt>
 <dd class="field-odd"><dl class="simple">
 <dt>UserWarning</dt><dd><ul class="simple">
-<li><p>When are given not supported countries.</p></li>
-<li><p>When are given not supported cities for a certain (supported) country.</p></li>
+<li><p>When not supported countries are given.</p></li>
+<li><p>When not supported cities are given for a certain (supported) country.</p></li>
 </ul>
 </dd>
 </dl>
@@ -385,13 +385,13 @@ countries and associated cities.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt>list</dt><dd><p>A new list with only supported pollutants. Each pollutant is expressed in the numeric notation.</p>
+<dt>list</dt><dd><p>A new list with only the supported pollutants. Each pollutant is expressed in the numeric notation.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-odd">Warns</dt>
 <dd class="field-odd"><dl class="simple">
-<dt>UserWarning</dt><dd><p>When are given not supported pollutants.</p>
+<dt>UserWarning</dt><dd><p>When not supported pollutants are given.</p>
 </dd>
 </dl>
 </dd>
@@ -399,8 +399,8 @@ countries and associated cities.</p>
 <p class="rubric">Notes</p>
 <ul class="simple">
 <li><p><cite>pollutants</cite> can be the string “all”: in this case the returned list contains all the supported pollutants.</p></li>
-<li><p>In <cite>pollutants</cite> are not considered supported the pollutants expressed in textual notation for which exist at least
-another pollutant with the same textual notation. (I.e. duplicate text notation)</p></li>
+<li><p>In <cite>pollutants</cite>, if a pollutant is expressed with a textual notation that is not unique (i.e. another EEA pollutant has
+the same textual notation) that pollutant is not considered supported.</p></li>
 </ul>
 </dd></dl>
 
@@ -417,13 +417,13 @@ another pollutant with the same textual notation. (I.e. duplicate text notation)
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt>list</dt><dd><p>A new list with only supported years.</p>
+<dt>list</dt><dd><p>A new list with only the supported years.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-odd">Warns</dt>
 <dd class="field-odd"><dl class="simple">
-<dt>UserWarning</dt><dd><p>When are given not supported years.</p>
+<dt>UserWarning</dt><dd><p>When not supported years are given.</p>
 </dd>
 </dl>
 </dd>
@@ -433,10 +433,10 @@ another pollutant with the same textual notation. (I.e. duplicate text notation)
 <dl class="py function">
 <dt class="sig sig-object py" id="EEA_datasets_handler.load_datasets">
 <span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">load_datasets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">countries_cities_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pollutants</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">years</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.load_datasets" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load the selected EEA air pollution datasets, retrieved from the local storage, in a single pandas DataFrame.
+<dd><p>Load the selected EEA air pollution datasets, retrieved from the local storage, into a single pandas DataFrame.
 (The EEA datasets are csv files).</p>
 <dl class="simple">
-<dt>The returned DataFrame it’s a raw DataFrame. This means two things.</dt><dd><ol class="arabic simple">
+<dt>The returned DataFrame is a raw DataFrame. This means two things.</dt><dd><ol class="arabic simple">
 <li><p>The DataFrame simply contains air pollution concentration measurements, which are not properly grouped by their
 days.</p></li>
 <li><p>The values in the DataFrame have not been cleaned.</p></li>
@@ -446,7 +446,7 @@ days.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>source_path</strong><span class="classifier">str</span></dt><dd><p>Local path in which search for the selected datasets.</p>
+<dt><strong>source_path</strong><span class="classifier">str</span></dt><dd><p>Local path in which the selected datasets are searched.</p>
 </dd>
 <dt><strong>countries_cities_dict</strong><span class="classifier">dict</span></dt><dd><p>Map between countries and list of cities. Each country can be either expressed in the code notation or in the
 extended notation.</p>
@@ -466,17 +466,17 @@ extended notation.</p>
 <dt class="field-odd">Warns</dt>
 <dd class="field-odd"><dl class="simple">
 <dt>UserWarning</dt><dd><ul class="simple">
-<li><p>When are given not supported countries/pollutants/years.</p></li>
-<li><p>When, for a specified country, isn’t found any dataset.</p></li>
-<li><p>When it’s not found any dataset at all.</p></li>
+<li><p>When not supported countries/pollutants/years are given.</p></li>
+<li><p>When, for a specified country, no dataset has been found.</p></li>
+<li><p>When no dataset at all has been found.</p></li>
 </ul>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>In <cite>countries_cities_dict</cite> a country can be associated to the string “all”: in this case all the supported cities of that
-country are taken into account.
+<p>In <cite>countries_cities_dict</cite> a country can be associated with the string “all”: in this case all the supported cities of
+that country are taken into account.
 In addition, the whole <cite>countries_cities_dict</cite> can be the string “all”: in this case all the supported countries and
 associated cities are considered.
 Also <cite>pollutants</cite> can be “all”, which means that all the supported pollutants are taken into account.</p>
@@ -486,11 +486,11 @@ Also <cite>pollutants</cite> can be “all”, which means that all the supporte
 <dt class="sig sig-object py" id="EEA_datasets_handler.preprocessing">
 <span class="sig-prename descclassname"><span class="pre">EEA_datasets_handler.</span></span><span class="sig-name descname"><span class="pre">preprocessing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_n_days</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_aggr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mean'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EEA_datasets_handler.preprocessing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Prepare and clean the given raw EEA DataFrame, grouping the air pollution concentration measurements by day.</p>
-<p>Return three DataFrames. All of them are indexed by dayes and all of them have only one column.
+<p>Return three DataFrames. All of these DataFrames are indexed by dayes and all of them have only one column.
 But:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>the first of them contains, for each day, the daily mean concentration;</p></li>
+<li><p>the first DataFrame contains, for each day, the daily mean concentration;</p></li>
 <li><p>the second contains, for each day, the daily min concentration;</p></li>
 <li><p>the third contains, for each day, the daily max concentration.</p></li>
 </ul>
@@ -500,13 +500,13 @@ But:</p>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>df</strong><span class="classifier">pd.DataFrame</span></dt><dd><p>The DataFrame to clean. It’s a raw EEA DataFrame, loaded using the load_datasets function.</p>
 </dd>
-<dt><strong>fill</strong><span class="classifier">bool</span></dt><dd><p>If True, the missing days (i.e. the days without any measurements in <cite>df</cite>) are filled. Otherwise they remain with a
+<dt><strong>fill</strong><span class="classifier">bool</span></dt><dd><p>If True, the missing days (i.e. the days in <cite>df</cite> without any measurement) are filled. Otherwise, they remain with a
 missing value.
 (In all the three returned DataFrame)</p>
 </dd>
-<dt><strong>fill_n_days</strong><span class="classifier">int or str</span></dt><dd><p>The number of previous days, contained in <cite>df</cite>, used to fill a missing day.
-<cite>fill_n_days</cite> can be either an integer or the string “all”: in the latter case all the previous days in <cite>df</cite> are used
-to fill the missing days.</p>
+<dt><strong>fill_n_days</strong><span class="classifier">int or str</span></dt><dd><p>The number of preceding  days, contained in <cite>df</cite>, used to fill a missing day.
+<cite>fill_n_days</cite> can be either an integer or the string “all”: in the latter case all the preceding  days in <cite>df</cite> are
+used to fill the missing days.</p>
 </dd>
 <dt><strong>fill_aggr</strong><span class="classifier">str</span></dt><dd><p>The statistic aggregation used to fill a missing day.
 It can be either “mean” or “min” or “max”.</p>
@@ -515,17 +515,17 @@ It can be either “mean” or “min” or “max”.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt>pd.DataFrame</dt><dd><p>The prepared and cleaned DataFrame, containing the daily mean concentration.</p>
+<dt>pd.DataFrame</dt><dd><p>The prepared and cleaned DataFrame, containing the daily mean concentrations.</p>
 </dd>
-<dt>pd.DataFrame</dt><dd><p>The prepared and cleaned DataFrame, containing the daily min concentration.</p>
+<dt>pd.DataFrame</dt><dd><p>The prepared and cleaned DataFrame, containing the daily min concentrations.</p>
 </dd>
-<dt>pd.DataFrame</dt><dd><p>The prepared and cleaned DataFrame, containing the daily max concentration.</p>
+<dt>pd.DataFrame</dt><dd><p>The prepared and cleaned DataFrame, containing the daily max concentrations.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-odd">Warns</dt>
 <dd class="field-odd"><dl class="simple">
-<dt>UserWarning</dt><dd><p>When are present missing days.</p>
+<dt>UserWarning</dt><dd><p>When missing days are contained in <cite>df</cite>.</p>
 </dd>
 </dl>
 </dd>
@@ -535,7 +535,7 @@ It can be either “mean” or “min” or “max”.</p>
 <li><p>If <cite>fill</cite> is True, the missing days are filled computing the aggregation <cite>fill_aggr</cite> on the <cite>fill_n_days</cite> days in <cite>df</cite>
 preceding the missing day.
 (In all the three returned DataFrame)
-Moreover the missing days, for which are not found previous days in <cite>df</cite>, are deleted from the returned DataFrame.
+Moreover, the missing days for which no preceding day has been found in <cite>df</cite> are deleted from the returned DataFrames.
 These days are surely the first days in <cite>df</cite>.</p></li>
 <li><p>The returned DataFrames are indexed by days. In particular, are used the pandas built-in types: the index type is
 pd.DatetimeIndex.</p></li>
@@ -550,7 +550,7 @@ pd.DatetimeIndex.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>source_path</strong><span class="classifier">str</span></dt><dd><p>Local path in which delete the selected datasets.</p>
+<dt><strong>source_path</strong><span class="classifier">str</span></dt><dd><p>Local path from which the selected datasets are removed.</p>
 </dd>
 <dt><strong>countries_cities_dict</strong><span class="classifier">dict</span></dt><dd><p>Map between countries and list of cities. Each country can be either expressed in the code notation or in the
 extended notation.</p>
@@ -563,14 +563,17 @@ extended notation.</p>
 </dd>
 <dt class="field-even">Warns</dt>
 <dd class="field-even"><dl class="simple">
-<dt>UserWarning</dt><dd><p>When are given not supported countries/pollutants/years.</p>
+<dt>UserWarning</dt><dd><ul class="simple">
+<li><p>When not supported countries/pollutants/years are given.</p></li>
+<li><p>When, for a specified country, no dataset has been found.</p></li>
+</ul>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>In <cite>countries_cities_dict</cite> a country can be associated to the string “all”: in this case all the supported cities of that
-country are taken into account.
+<p>In <cite>countries_cities_dict</cite> a country can be associated with the string “all”: in this case all the supported cities of
+that country are taken into account.
 In addition, the whole <cite>countries_cities_dict</cite> can be the string “all”: in this case all the supported countries and
 associated cities are considered.
 Also <cite>pollutants</cite> can be “all”, which means that all the supported pollutants are taken into account.</p>
@@ -584,7 +587,7 @@ Also <cite>pollutants</cite> can be “all”, which means that all the supporte
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>source_path</strong><span class="classifier">str</span></dt><dd><p>Local path in which search for the selected datasets.</p>
+<dt><strong>source_path</strong><span class="classifier">str</span></dt><dd><p>Local path in which the selected datasets are searched.</p>
 </dd>
 <dt><strong>countries_cities_dict</strong><span class="classifier">dict</span></dt><dd><p>Map between countries and list of cities. Each country can be either expressed in the code notation or in the
 extended notation.</p>
@@ -604,16 +607,16 @@ extended notation.</p>
 <dt class="field-odd">Warns</dt>
 <dd class="field-odd"><dl class="simple">
 <dt>UserWarning</dt><dd><ul class="simple">
-<li><p>When are given not supported countries/pollutants/years.</p></li>
-<li><p>When, for a specified country, isn’t found any dataset.</p></li>
+<li><p>When not supported countries/pollutants/years are given.</p></li>
+<li><p>When, for a specified country, no dataset has been found.</p></li>
 </ul>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>In <cite>countries_cities_dict</cite> a country can be associated to the string “all”: in this case all the supported cities of that
-country are taken into account.
+<p>In <cite>countries_cities_dict</cite> a country can be associated with the string “all”: in this case all the supported cities of
+that country are taken into account.
 In addition, the whole <cite>countries_cities_dict</cite> can be the string “all”: in this case all the supported countries and
 associated cities are considered.
 Also <cite>pollutants</cite> can be “all”, which means that all the supported pollutants are taken into account.</p>
