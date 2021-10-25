@@ -93,7 +93,7 @@ def get_supported_countries():
 
 def get_supported_cities():
     """
-    Return all the EEA supported countries.
+    Return all the EEA supported cities.
 
     Returns
     ----------

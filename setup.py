@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
   name="EEA-datasets-handler",
-  version="0.0.4",
+  version="1.0.1",
   py_modules =["EEA_datasets_handler"],
   description="Library which handles the air pollution datasets provided by EEA",
   long_description=long_description,

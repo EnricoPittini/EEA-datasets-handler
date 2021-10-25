@@ -1,5 +1,5 @@
 # EEA-datasets-handler
-Library which handles the air pollution datasets provided by [EEA](https://www.eea.europa.eu/data-and-maps/data/aqereporting-8).
+Library for handling the air pollution datasets provided by [EEA](https://www.eea.europa.eu/data-and-maps/data/aqereporting-8).
 
 This library is part of my bachelor thesis, check out the other works.
 - [ILMETEO-datasets-handler](https://github.com/EnricoPittini/ILMETEO-datasets-handler)
